@@ -1,0 +1,12 @@
+DETAILS
+
+I'm writing an ORM in Scala as an exercise for the Bmore Hackers language study group.  As a disclaimer, I am in the process of learning Scala.  Do not interpret any of this code as a best practice.
+
+INSTRUCTIONS
+./run.sh expects the mysql JDBC adapter to be installed in the scorm directory.  Download http://dev.mysql.com/downloads/connector/j/5.1.html and unpack it so that all of the contents sit in the mysql-connector-java-5.1.7/ directory.  Then you can run the script with ./run.sh
+
+* Before you can run the script, you'll need to create the database.  mysqladmin -u root create scorm
+* Next, run "scala -classpath mysql-connector-java-5.1.7/mysql-connector-java-5.1.7-bin.jar jdbc.scala" --- this is the sample file that we started the project with.  It will create a table articles with id, title and body fields.  It will also insert a single record into the database.
+* Now you can run scorm.scala (via ./run.sh).  This will simply do the equivalent of Article.find(1) (as in ActiveRecord) and print out the details.
+
+_Everything_ is hard-coded at this point.
